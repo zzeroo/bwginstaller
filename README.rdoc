@@ -1,0 +1,3 @@
+= BWG Installer
+
+BWGInstaller ist eine kleine GUI zur semiautomatischen Medistar Client installation.
