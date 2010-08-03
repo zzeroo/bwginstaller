@@ -1,2 +1,4 @@
 .bundle
 Programme/*
+*.swp
+*.bak
