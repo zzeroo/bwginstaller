@@ -6,8 +6,6 @@ module BWGInstaller
     def self.run(options, config)
       @options = options
       @config = config
-
-      puts @options.os
     end
   end
 end

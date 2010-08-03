@@ -12,6 +12,7 @@ module BWGInstaller
       options.transfer_type = :auto
       options.verbose = false
       options.ini_file = File.join(File.dirname(__FILE__),'..','BWGInstaller.ini')
+      options.plugin_dir = File.join(File.dirname(__FILE__),'..','plugins')
 
       opts = ::OptionParser.new do |opts|
         opts.banner = "Usage: bwginstaller.rb [options]"

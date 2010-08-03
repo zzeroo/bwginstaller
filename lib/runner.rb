@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 require 'option_parser'
 require 'ini_file_parser'
-require 'check_environment'
+require 'pluginsystem'
+require 'configurator'
 
 module BWGInstaller
   class Runner
@@ -12,6 +13,9 @@ module BWGInstaller
 
       # Fellowed by the configs
       @config = BWGInstaller::IniFileParser.parse(@options.ini_file)
+      
+      # Loads Plugins
+      BWGInstaller::PluginSystem.init(@options.plugin_dir)
     end
 
     def start

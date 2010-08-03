@@ -1,0 +1,3 @@
+[submodule "plugins/os"]
+	path = plugins/os
+	url = http://github.com/rdp/os.git
