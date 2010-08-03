@@ -1,8 +1,13 @@
-runner -> startet dem ganzen stack
-  |
-  - option_parser -> options auswerten
-  |
-  - ini_parser -> konfig ini auswerten
+<ul>runner -> startet dem ganzen stack
+  <li>option_parser -> options auswerten
+    <ul>options ->  Openstruct Objekt
+        <li>speichert Optionen (default config, befehlszeile)
+    </ul>
+  <li>ini_parser -> konfig ini auswerten
+    <ul>konfig ->   - IniFile Object
+      <li>speichert konfig aus BWGInstaller.ini Datei im Root
+        <li>ini["Workstation"] => {"stdComputername"=>"WS", "altComputername0"=>"Anmeldung", "altComputername1"=>"Sprechzimmer", "Arbeitsgruppe"=>"Praxis", "altComputername2"=>"Buero", "Benutzerpasswd"=>"DEMO", "IP-Adresse"=>"192.168.100.101"}
+  </ul>
+</ul>
 
-
-@options -> speichert alle Optionen (default config, befehlszeile und konfig.ini)
+<pre>
