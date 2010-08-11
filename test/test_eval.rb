@@ -2,16 +2,16 @@
 require 'rubygems'
 require 'win32/registry' if Gem.searcher.find('win32/registry')
 
-def on(path)
+def open(path)
   hive = path.split('\\', 2)[0]
-  key = path.split('\\', 2)[1]
+  keyname = path.split('\\', 2)[1]
   
-  name = "Win32::Registry::" + hive + ".create" + " " + key
-  puts name
+  name = "Win32::Registry::" + hive + ".open" + " " + keyname
+  name
 end
 
 def value(val)
-  puts val
+  val
 end
 
 def set(desc,&block)
@@ -20,5 +20,5 @@ def set(desc,&block)
   yield
 end
 
-eval(File.read('ClientConfig.rb'))
+eval(File.read(File.join(File.dirname(__FILE__),'ClientConfig.rb')))
 
